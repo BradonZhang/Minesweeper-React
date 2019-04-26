@@ -1,14 +1,100 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body, .root {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.game-board {
+    width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tile {
+    width: 24px;
+    height: 24px;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+    float: left;
+    background-image: url('./images/blank.png');
+    text-transform: bold;
+    font-size: 16px;
+}
+
+/*.tile-hidden:hover:active,*/ .tile-revealed {
+    background-image: url('./images/tile0.png');
+}
+
+.tile1 {
+    background-image: url('./images/tile1.png');
+}
+.tile2 {
+    background-image: url('./images/tile2.png');
+}
+.tile3 {
+    background-image: url('./images/tile3.png');
+}
+.tile4 {
+    background-image: url('./images/tile4.png');
+}
+.tile5 {
+    background-image: url('./images/tile5.png');
+}
+.tile6 {
+    background-image: url('./images/tile6.png');
+}
+.tile7 {
+    background-image: url('./images/tile7.png');
+}
+.tile8 {
+    background-image: url('./images/tile8.png');
+}
+
+.tile-flagged {
+    background-image: url('./images/flag.png');
+}
+
+.tile-mined {
+    background-image: url('./images/mine.png')
+}
+
+.tile-redmine {
+    background-image: url('./images/exploded_mine.png');
+}
+
+.tile-falseflag {
+    background-image: url('./images/false_flag.png');
+}
+
+.face-container {
+    width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #BBBBBB;
+}
+.face {
+    width: 39px;
+    height: 39px;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+}
+.face:active {
+    background-image: url('./images/face_clicked.png')
+}
+.face-playing {
+    background-image: url('./images/face_playing.png');
+}
+.face-lost {
+    background-image: url('./images/face_lose.png');
+}
+.face-won {
+    background-image: url('./images/face_win.png');
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
 }
